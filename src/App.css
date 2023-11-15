@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+
+* {
+	margin: 0;
+	font-family: "Quicksand";
+	color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board {
+	height: auto;
+	min-height: 100vh;
+	background-color: #eee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ticket {
+	background-color: #fff;
+	max-width: 400px;
+	display: block;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+	margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ticket-top {
+	display: flex;
+	margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.ticket-user {
+	margin-left: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ticket-id {
+	color: #777;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.ticket-title {
+	margin-top: 3px;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.navbar {
+	background-color: white;
+	padding: 10px 30px;
+}
+
+.tickets {
+	display: flex;
+}
+
+.tickets-group {
+	min-width: 400px;
+	margin: 20px;
+}
+
+.group-title {
+	display: flex;
+	padding: 10px;
+	align-items: center;
+}
+
+.group-title h2 {
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.user-image-container {
+	margin-left: auto;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+.user-image {
+	height: 100%;
+	object-fit: cover;
+}
+
+.group-title-icon {
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+
+	cursor: pointer;
+}
+
+button {
+	padding: 5px;
+	border: none;
+}
+
+.tag {
+	margin-left: 5px;
+	display: inline-block;
+	padding: 5px;
+	width: auto;
+	height: 25px;
+	margin-top: 4px;
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-foot {
+	display: flex;
+}
+
+.priority-icon {
+	width: 30px;
+	height: 25px;
+}
+
+.ticket-mid {
+	display: flex;
+}
+
+.status-icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	padding: 2px;
+}
+
+.board {
+	min-width: 320px;
+}
+
+.tickets {
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+	.tickets {
+		flex-direction: column;
+	}
+}
+
+.group-size {
+	margin-left: 20px;
+	font-size: 16px;
 }
