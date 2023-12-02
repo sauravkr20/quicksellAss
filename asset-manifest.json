@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/quicksellAss/static/css/main.a02e87d4.css",
-    "main.js": "/quicksellAss/static/js/main.300f7f34.js",
+    "main.js": "/quicksellAss/static/js/main.b0745690.js",
     "static/js/787.9e9f4ffd.chunk.js": "/quicksellAss/static/js/787.9e9f4ffd.chunk.js",
     "static/media/user.jpg": "/quicksellAss/static/media/user.e4dcc3e7c0b281948621.jpg",
     "index.html": "/quicksellAss/index.html",
     "main.a02e87d4.css.map": "/quicksellAss/static/css/main.a02e87d4.css.map",
-    "main.300f7f34.js.map": "/quicksellAss/static/js/main.300f7f34.js.map",
+    "main.b0745690.js.map": "/quicksellAss/static/js/main.b0745690.js.map",
     "787.9e9f4ffd.chunk.js.map": "/quicksellAss/static/js/787.9e9f4ffd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a02e87d4.css",
-    "static/js/main.300f7f34.js"
+    "static/js/main.b0745690.js"
   ]
 }
