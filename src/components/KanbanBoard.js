@@ -8,18 +8,28 @@ const KanbanBoard = () => {
 	const [groupBy, setGroupBy] = useState("priority");
 	const [sortOption, setSortOption] = useState("title");
 	const [users, setUsers] = useState([]);
+	const [loading, setLoading] = useState(true); // Added loading state
 
 	useEffect(() => {
-		// Fetch data from the provided API when the component mounts
 		fetch("https://api.quicksell.co/v1/internal/frontend-assignment")
 			.then((response) => response.json())
 			.then((data) => {
 				setTickets(data.tickets);
 				setUsers(data.users);
-				groupTickets();
-				sortTickets();
+				setLoading(false); // Set loading to false once data is loaded
+			})
+			.catch((error) => {
+				console.error("Error fetching data:", error);
+				setLoading(false); // Set loading to false in case of an error
 			});
 	}, []);
+
+	useEffect(() => {
+		// Perform actions after tickets state has been updated
+		console.log("Tickets updated:", tickets);
+		groupTickets();
+		sortTickets();
+	}, [tickets]); // Add tickets as a dependency
 
 	// Function to group tickets based on the selected grouping option
 	const groupTickets = () => {
@@ -132,7 +142,7 @@ const KanbanBoard = () => {
 
 	useEffect(() => {
 		groupTickets();
-	}, [groupBy]);
+	}, [tickets, groupBy]);
 
 	useEffect(() => {
 		sortTickets();
@@ -145,8 +155,6 @@ const KanbanBoard = () => {
 				setGroupBy={setGroupBy}
 				sortOption={sortOption}
 				setSortOption={setSortOption}
-				groupTickets={groupTickets}
-				sortTickets={sortTickets}
 			/>
 
 			{/* Render the Kanban board here using the 'groupedTickets' state */}
